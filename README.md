@@ -14,6 +14,8 @@ python MockupMaker.py
 
 By default your video will be rendered on a white iPhone X on a green background.
 
+There are `white` and `blank` colors for `pixel`, `android` (wide pixel), and `iPhone`.
+
 You can find your rendered video in the `_output/` folder.
 
 ## Installation
