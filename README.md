@@ -35,8 +35,10 @@ Once it's installed, use:
 ```
     pyenv install 3.6.6
     pyenv local 3.6.6
-    pyenv --version
+    python --version
 ```
+
+`python --version` should read `3.3.6`
 
 ### Install the video utilities
 
