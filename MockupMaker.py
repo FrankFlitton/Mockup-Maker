@@ -48,13 +48,14 @@ def overlayFootage(
             pos=center_xy[device],
             col_opacity=0,
         )
-    video_clip = video_clip.subclip(0,0.5)
 
     # set local vars
     duration = video_clip.duration
-    duration = 0.5
 
-    # mask_clip = mask_clip.set_duration(duration)
+    # Temp for testing
+    # duration = 0.5
+    # video_clip = video_clip.subclip(0,0.5)
+    mask_clip = mask_clip.set_duration(duration)
     video_clip = video_clip.set_mask(mask_clip).on_color(
             size=(1920,1080),
             color=(255, 0, 0),
@@ -113,21 +114,12 @@ def overlayFootage(
         use_bgclip=True
     )
 
-    video = CompositeVideoClip(
-        [
-            overlay_clip,
-            # wallpaper_clip,
-            # device_clip,
-            video_clip,
-        ],
-        use_bgclip=True
-    )
-
     # Export video
     overlay_clip.write_videofile(
         export_filename,
         codec='mpeg4',
-        preset='ultrafast',
+        # preset='ultrafast',
+        preset='slow',
     )
 
 def getInputVideos():
