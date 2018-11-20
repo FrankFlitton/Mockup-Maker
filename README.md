@@ -18,6 +18,64 @@ There are `white` and `blank` colors for `pixel`, `android` (wide pixel), and `i
 
 You can find your rendered video in the `_output/` folder.
 
+### Attributes
+
+Edit the `config.py` file to set up the render for your project.
+
+```python
+settings = dict(
+    device = 'iphone',
+    color = 'white',
+    wallpaper = 'MoMoney',
+    input_folder = './_input/',
+    input_file = None,
+    output_folder = '_output/',
+    testing = True,
+)
+```
+
+#### Device
+
+> The mockup of the pysical device to impose the mockup video on.
+
+Options:
+- `'iphone'`
+- `'pixel'`
+- `'android'`
+
+#### Color
+
+> Variant of device graphic
+
+Options:
+- `'black'`
+- `'white'`
+
+#### Wallpaper
+
+> The background image
+
+Options:
+- `'MoMoney'`
+- `'MagneticArrows'`
+
+#### Input Folder
+
+> Directory where the raw files are located.
+
+#### Input File
+
+> Render a specific file. Leave blank to render all files in the directory.
+
+#### Output Folder
+
+> Directory where the rendered files are saved.
+
+#### Testing
+
+> Render a 0.5s clip fast to verify that your output file looks right.
+
+
 ## Installation
 
 ### Requirements

@@ -1,11 +1,25 @@
+import configparser
 from os import listdir, path
 from os.path import isfile, join
 
 from moviepy.editor import *
 
+import config
 
-input_folder = './_input/'
-output_folder = '_output/'
+
+# Global Variables
+default = dict(
+    wallpaper = 'MoMoney',
+    device = 'iphone',
+    color = 'white',
+    testing = True,
+    input_folder = './_input/',
+    input_file = None,
+    output_folder = '_output/',
+)
+settings = {**default, **config.config.settings}
+
+# Device Placement
 center_xy = {
     'pixel': ('center',136),
     'iphone': ('center',136),
@@ -16,6 +30,7 @@ device_wh = {
     'iphone': [411,821],
     'android': [464,821],
 }
+
 
 def overlayFootage(
     input=None,
@@ -36,7 +51,7 @@ def overlayFootage(
 
     # Anayze clip that the composition will be based off of
     video_clip = VideoFileClip(
-        input_folder + input
+        settings['input_folder'] + input
         ).fx(
             vfx.resize,
             width=(
@@ -66,7 +81,7 @@ def overlayFootage(
             col_opacity=0,
         )
 
-    export_filename = output_folder
+    export_filename = settings['output_folder']
     export_filename += path.splitext(input)[0]
     export_filename += '-' + device.lower()
     export_filename += '-' + color.lower()
@@ -125,32 +140,34 @@ def overlayFootage(
         ]
     )
 
+
 def getInputVideos():
-    input_files = [
-        file for file in listdir(input_folder)
-            if isfile(join(input_folder, file))
-    ]
-    print(input_files)
-
-    for file in input_files:
+    if settings['input_file'] is not None:
+        # Render an explicit file
         overlayFootage(
-            input=file
+            input=settings['input_file'],
+            device=settings['device'],
+            color=settings['color'],
+            wallpaper=settings['wallpaper'],
+            testing=settings['testing'],
         )
+    else:
+        #Render a Collection of files
+        input_files = [
+            file for file in listdir(settings['input_folder'])
+                if isfile(join(settings['input_folder'], file))
+        ]
+        print(input_files)
 
-# getInputVideos()
-# overlayFootage(
-#     input='finaltdparkingdemo.mp4',
-#     device='pixel',
-# )
-# overlayFootage(
-#     input='finaltdparkingdemo.mp4',
-#     device='android',
-#     color='white',
-# )
-overlayFootage(
-    input='finaltdparkingdemo.mp4',
-    device='android',
-    color='white',
-    wallpaper='MagneticArrows',
-    testing=True,
-)
+        for file in input_files:
+            overlayFootage(
+                input=file,
+                device=settings['device'],
+                color=settings['color'],
+                wallpaper=settings['wallpaper'],
+                testing=settings['testing'],
+            )
+
+
+# kick it off
+getInputVideos()
