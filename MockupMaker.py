@@ -22,6 +22,7 @@ def overlayFootage(
     wallpaper='MoMoney',
     device='iphone',
     color='white',
+    testing=False
 ):
     wallpaper_img = './img/wallpaper/' + wallpaper + '.jpg'
     device_img = './img/device/' + device.lower() + '/' + color.lower() + '.png'
@@ -50,11 +51,14 @@ def overlayFootage(
         )
 
     # set local vars
-    duration = video_clip.duration
+    if testing == True:
+        duration = 0.5
+    else:
+        duration = video_clip.duration
 
     # Temp for testing
-    # duration = 0.5
-    # video_clip = video_clip.subclip(0,0.5)
+    video_clip = video_clip.subclip(0,duration)
+
     mask_clip = mask_clip.set_duration(duration)
     video_clip = video_clip.set_mask(mask_clip).on_color(
             size=(1920,1080),
@@ -111,8 +115,7 @@ def overlayFootage(
     overlay_clip.write_videofile(
         export_filename,
         codec='h264',
-        preset='medium',
-        # preset='slow',
+        preset='ultrafast' if testing is True else 'medium',
         ffmpeg_params=[
             '-tune', 'animation',
             '-pix_fmt', 'yuv420p',
@@ -134,4 +137,20 @@ def getInputVideos():
             input=file
         )
 
-getInputVideos()
+# getInputVideos()
+# overlayFootage(
+#     input='finaltdparkingdemo.mp4',
+#     device='pixel',
+# )
+# overlayFootage(
+#     input='finaltdparkingdemo.mp4',
+#     device='android',
+#     color='white',
+# )
+overlayFootage(
+    input='finaltdparkingdemo.mp4',
+    device='android',
+    color='white',
+    wallpaper='MagneticArrows',
+    testing=True,
+)
