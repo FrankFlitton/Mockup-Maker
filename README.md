@@ -4,15 +4,17 @@ A tool to set up video screen captures on a device mockup.
 
 ## Usage
 
-Place videos to render into the `/_input/` folder. Make sure the app screen touches the top and bottom of the video feed.
+Place videos to render into the `_input/` folder. Make sure the app screen touches the top and bottom of the video feed.
 
-Run the following to start the video editing process. It can take 20 or more minutes to render.
+Run the following in terminal to start the video editing process. It can take 20 or more minutes to render.
 
 ```
 python MockupMaker.py
 ```
 
 By default your video will be rendered on a white iPhone X on a green background.
+
+You can find your rendered video in the `_output/` folder.
 
 ## Installation
 
@@ -48,3 +50,10 @@ You may also need to install FFmpeg. Instructions (If you need homebrew) http://
 ```
     brew install ffmpeg
 ```
+
+## TODO
+
+- Config File
+- More backgrounds
+- GUI
+- Freeze and export as deskktop app
