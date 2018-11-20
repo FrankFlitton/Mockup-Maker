@@ -111,10 +111,14 @@ def overlayFootage(
     overlay_clip.write_videofile(
         export_filename,
         codec='h264',
-        preset='fast',
+        preset='medium',
         # preset='slow',
         ffmpeg_params=[
             '-tune', 'animation',
+            '-pix_fmt', 'yuv420p',
+            '-crf', '18',
+            '-c:a', 'aac',
+            '-b:a', '192k',
         ]
     )
 
