@@ -97,13 +97,6 @@ def overlayFootage(
         col_opacity=0,
     )
 
-    # video_clip = video_clip.set_mask(mask_clip).on_color(
-    #     size=(1920,1080),
-    #     color=(0, 0, 0),
-    #     pos='center',
-    #     col_opacity=0,
-    # )
-
     # Stack video clips together
     overlay_clip = CompositeVideoClip(
         clips=[
@@ -134,4 +127,18 @@ def getInputVideos():
             input=file
         )
 
-getInputVideos()
+# getInputVideos()
+overlayFootage(
+    input='finaltdparkingdemo.mp4',
+    device=pixel,
+)
+overlayFootage(
+    input='finaltdparkingdemo.mp4',
+    device=iphone,
+    color=black,
+)
+overlayFootage(
+    input='finaltdparkingdemo.mp4',
+    device=android,
+    color=white,
+)
