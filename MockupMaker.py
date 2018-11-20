@@ -128,18 +128,4 @@ def getInputVideos():
             input=file
         )
 
-# getInputVideos()
-overlayFootage(
-    input='finaltdparkingdemo.mp4',
-    device='pixel',
-)
-overlayFootage(
-    input='finaltdparkingdemo.mp4',
-    device='iphone',
-    color='black',
-)
-overlayFootage(
-    input='finaltdparkingdemo.mp4',
-    device='android',
-    color='white',
-)
+getInputVideos()
