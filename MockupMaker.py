@@ -130,15 +130,15 @@ def getInputVideos():
 # getInputVideos()
 overlayFootage(
     input='finaltdparkingdemo.mp4',
-    device=pixel,
+    device='pixel',
 )
 overlayFootage(
     input='finaltdparkingdemo.mp4',
-    device=iphone,
-    color=black,
+    device='iphone',
+    color='black',
 )
 overlayFootage(
     input='finaltdparkingdemo.mp4',
-    device=android,
-    color=white,
+    device='android',
+    color='white',
 )
