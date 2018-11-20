@@ -113,7 +113,9 @@ def overlayFootage(
         codec='h264',
         preset='fast',
         # preset='slow',
-        ffmpeg_params=['-tune', 'animation']
+        ffmpeg_params=[
+            '-tune', 'animation',
+        ]
     )
 
 def getInputVideos():
