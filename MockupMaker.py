@@ -20,7 +20,7 @@ device_wh = {
 def overlayFootage(
     input=None,
     wallpaper='MoMoney',
-    device='android',
+    device='iphone',
     color='white',
 ):
     wallpaper_img = './img/wallpaper/' + wallpaper + '.jpg'
