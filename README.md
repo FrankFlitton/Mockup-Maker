@@ -11,3 +11,9 @@ Navigate to the folder in terminal and run the following.
 ```
 
 Or run the `install.command` file from finder.
+
+You may also need to install FFmpeg. http://macappstore.org/ffmpeg/
+
+```
+    brew install ffmpeg
+```
