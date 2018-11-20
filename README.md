@@ -20,7 +20,7 @@ You can find your rendered video in the `_output/` folder.
 
 ## Installation
 
-### Prerequisites
+### Requirements
 
 Requires python 3! I recomend using pyenv to install python 3.6.6 for this folder.
 
@@ -58,4 +58,4 @@ You may also need to install FFmpeg. Instructions (If you need homebrew) http://
 - Config File
 - More backgrounds
 - GUI
-- Freeze and export as deskktop app
+- Freeze and export as desktop app
