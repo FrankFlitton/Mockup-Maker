@@ -2,6 +2,16 @@
 
 > A tool to set up video screen captures on a device mockup.
 
+```python
+     _______________
+    |,----------.  |\
+    ||  Mockup   |=| |
+    ||  Maker   || | |
+    ||       . _o| | |
+    |`-----------' |/
+     ~~~~~~~~~~~~~~~
+```
+
 ## Usage
 
 Place videos to render into the `_input/` folder. Make sure the app screen touches the top and bottom of the video feed.
@@ -115,7 +125,6 @@ You may also need to install FFmpeg. Instructions (If you need homebrew) http://
 
 ## TODO
 
-- Config File
 - More backgrounds
 - GUI
 - Freeze and export as desktop app
