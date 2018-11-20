@@ -1,10 +1,10 @@
 class config():
     settings = dict(
-        wallpaper = 'MoMoney',
         device = 'iphone',
         color = 'white',
-        testing = True,
+        wallpaper = 'MoMoney',
         input_folder = './_input/',
         input_file = None,
         output_folder = '_output/',
+        testing = False,
     )
