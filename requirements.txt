@@ -1,2 +1,3 @@
 ez_setup
 moviepy
+requests
