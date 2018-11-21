@@ -38,6 +38,14 @@ class config():
         # Must NOT be in 'quotes' if None
         input_file = None,
 
+        # Cut X seconds from start
+        # Should be a float or int number
+        trim_start = 0,
+
+        # Cut X seconds from end
+        # Should be a float or int number
+        trim_end = 0,
+
         # Which folder to save videos to.
         # Must be in 'quotes'
         output_folder = '_output/',

@@ -15,6 +15,8 @@ default = dict(
     testing = False,
     input_folder = './_input/',
     input_file = None,
+    trim_start = 0,
+    trim_end = 0,
     output_folder = '_output/',
 )
 settings = {**default, **config.config.settings}
@@ -66,13 +68,19 @@ def overlayFootage(
         )
 
     # set local vars
+    start_position = 0 + settings['trim_start']
+
     if testing == True:
         duration = 0.5
     else:
-        duration = video_clip.duration
+        end_position = video_clip.duration - start_position
+        duration = end_position - start_position
 
     # Temp for testing
-    video_clip = video_clip.subclip(0,duration)
+    video_clip = video_clip.subclip(
+        start_position,
+        end_position,
+    )
 
     mask_clip = mask_clip.set_duration(duration)
     video_clip = video_clip.set_mask(mask_clip).on_color(

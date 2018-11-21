@@ -40,6 +40,8 @@ settings = dict(
     wallpaper = 'MoMoney',
     input_folder = './_input/',
     input_file = None,
+    trim_start = 0,
+    trim_end = 0,
     output_folder = '_output/',
     testing = True,
 )
@@ -77,6 +79,14 @@ Options:
 #### Input File
 
 > Render a specific file. Leave blank to render all files in the directory.
+
+#### Trim Start
+
+> Remove X seconds of footage from the start of the input file.
+
+#### Trim End
+
+> Remove X seconds of footage from the end of the input file.
 
 #### Output Folder
 
