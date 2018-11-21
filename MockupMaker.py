@@ -166,7 +166,12 @@ def getInputVideos():
             file for file in listdir(settings['input_folder'])
                 if isfile(join(settings['input_folder'], file))
         ]
+
+        if '.DS_Store' in input_files:
+            input_files.remove('.DS_Store')
+
         print(input_files)
+
 
         for file in input_files:
             overlayFootage(
