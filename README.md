@@ -107,7 +107,7 @@ Once it's installed, use:
     python --version
 ```
 
-`python --version` should read `3.3.6`
+`python --version` should read `3.6.6`
 
 ### Install the video utilities
 
