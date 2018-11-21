@@ -127,5 +127,5 @@ You may also need to install FFmpeg. Instructions (If you need homebrew) http://
 ## TODO
 
 - More backgrounds
-- GUI
+- GUI (may need to wait for new version of PyQt for latest OSX)
 - Freeze and export as desktop app
