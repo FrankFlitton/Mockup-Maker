@@ -72,6 +72,7 @@ def overlayFootage(
 
     if testing == True:
         duration = 0.5
+        end_position = duration + start_position
     else:
         end_position = video_clip.duration - start_position
         duration = end_position - start_position
