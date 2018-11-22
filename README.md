@@ -52,26 +52,26 @@ settings = dict(
 > The mockup of the pysical device to impose the mockup video on.
 
 Options:
--`'iphone'`
--`'pixel'`
--`'android'`
+* `'iphone'`
+* `'pixel'`
+* `'android'`
 
 #### Color
 
 > Variant of device graphic
 
 Options:
--`'black'`
--`'white'`
+* `'black'`
+* `'white'`
 
 #### Wallpaper
 
 > The background image
 
 Options:
--`'MoMoney'`
--`'MagneticArrows'`
--`'White'`
+* `'MoMoney'`
+* `'MagneticArrows'`
+* `'White'`
 
 #### Input Folder
 
@@ -137,6 +137,6 @@ You may also need to install FFmpeg. Instructions (If you need homebrew) http://
 
 ## TODO
 
-- More backgrounds
-- GUI (may need to wait for new version of PyQt for latest OSX)
-- Freeze and export as desktop app
+* More backgrounds
+* GUI (may need to wait for new version of PyQt for latest OSX)
+* Freeze and export as desktop app
