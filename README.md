@@ -52,25 +52,26 @@ settings = dict(
 > The mockup of the pysical device to impose the mockup video on.
 
 Options:
-- `'iphone'`
-- `'pixel'`
-- `'android'`
+-`'iphone'`
+-`'pixel'`
+-`'android'`
 
 #### Color
 
 > Variant of device graphic
 
 Options:
-- `'black'`
-- `'white'`
+-`'black'`
+-`'white'`
 
 #### Wallpaper
 
 > The background image
 
 Options:
-- `'MoMoney'`
-- `'MagneticArrows'`
+-`'MoMoney'`
+-`'MagneticArrows'`
+-`'White'`
 
 #### Input Folder
 

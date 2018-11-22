@@ -25,7 +25,7 @@ class config():
         color = 'white',
 
         # Controls the background graphic (jpg).
-        # Options are 'MoMoney', 'MagneticArrows'
+        # Options are 'MoMoney', 'MagneticArrows', 'White'
         # Must be in 'quotes'
         wallpaper = 'MoMoney',
 
